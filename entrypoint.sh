@@ -9,11 +9,10 @@ args="$4"
 extra_system_packages="$5"
 extra_font_packages="$6"
 
-if [ -n "$extra_system_packages" ]; then
-  apt-get update
+if [ -n "$extra_system_packages" ]; then  
   for pkg in $extra_system_packages; do
-    echo "Install $pkg by apt"
-    apt-get -y install "$pkg"
+    echo "Install $pkg by pacman"
+    pacman -Sy --noconfirm "$pkg"
   done
 fi
 
