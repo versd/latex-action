@@ -1,9 +1,9 @@
 FROM versd/arch_texlive_python:latest
 
-WORKDIR /root
+WORKDIR /home/apprunner
 
 COPY \
   entrypoint.sh \
-  /root/
+  /home/apprunner
 
-ENTRYPOINT ["/root/entrypoint.sh"]
+ENTRYPOINT ["/home/apprunner/entrypoint.sh"]
